@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+  <html lang="pt-br">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Jogo da Velha da FADAP</title>
+      <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>X</text></svg>">
+      <link rel="stylesheet" href="css/index.css">
+  </head>
+  <body>
+      <div id="confetti-container"></div>
+
+      <main class="app">
+          <header class="header">
+              <span class="header__logo">FADAP Project</span>
+              <h1 class="header__title">Jogo da Velha da FADAP</h1>
+            <p class="header__subtitle">O classico, repaginado com estilo</p>
+        </header>
+
+        <!-- Mode Toggle -->
+        <div class="mode-switch">
+            <label class="toggle" id="toggle-mode">
+                <input type="checkbox" id="mode-toggle" aria-label="Alternar modo de jogo">
+                  <span class="toggle__track"></span>
+                  <span class="toggle__thumb"></span>
+              </label>
+              <span class="mode-switch__label" id="mode-label">2 Jogadores</span>
+          </div>
+
+          <!-- Scoreboard -->
+          <section class="scoreboard" aria-label="Placar">
+              <div class="scoreboard__card scoreboard__card--x">
+                  <span class="scoreboard__name" id="player-x-name">Jogador X</span>
+                  <span class="scoreboard__score" id="score-x">0</span>
+              </div>
+              <div class="scoreboard__card scoreboard__card--draw">
+                  <span class="scoreboard__name">Empates</span>
+                  <span class="scoreboard__score" id="score-draw">0</span>
+              </div>
+              <div class="scoreboard__card scoreboard__card--o">
+                  <span class="scoreboard__name" id="player-o-name">Jogador O</span>
+                  <span class="scoreboard__score" id="score-o">0</span>
+              </div>
+          </section>
+
+          <!-- Status -->
+          <div class="status" id="status" aria-live="polite">
+              Vez de <span class="status__symbol status__symbol--x">X</span> - Jogador X
+        </div>
+
+        <!-- Board -->
+        <section class="board" id="board" aria-label="Tabuleiro">
+            <!-- Cells are created dynamically by UI module -->
+          </section>
+
+          <!-- Actions -->
+          <div class="actions">
+              <button class="btn btn--primary" id="btn-restart" aria-label="Reiniciar jogo">
+                  Nova Rodada
+            </button>
+              <button class="btn btn--secondary" id="btn-reset-all" aria-label="Resetar placar">
+                  Resetar Tudo
+            </button>
+          </div>
+
+          <!-- Footer -->
+          <footer class="footer">
+              <p>Desenvolvido para FADAP . 2026</p>
+          </footer>
+      </main>
+
+      <script type="module" src="js/main.js"></script>
+  </body>
+  </html>
